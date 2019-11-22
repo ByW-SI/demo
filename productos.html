@@ -135,6 +135,34 @@
                         <label for="precio"><small class="text-uppercase"><strong>precio</strong></small></label>
                         <input type="number" name="precio" class="form-control">
                     </div>
+                    <!-- tiene_oferta -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="tiene_oferta"><small class="text-uppercase"><strong>tiene_oferta</strong></small></label>
+                        <select name="tiene_oferta" class="form-control inputOferta">
+                            <option value="1">Sí</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <!-- precio_oferta -->
+                    <div class="col-12 col-md-3 mt-2 campoOferta">
+                        <label for="precio_oferta"><small class="text-uppercase"><strong>precio_oferta</strong></small></label>
+                        <input type="number" name="precio_oferta" class="form-control">
+                    </div>
+                    <!-- descuento_oferta -->
+                    <div class="col-12 col-md-3 mt-2 campoOferta">
+                        <label for="descuento_oferta"><small class="text-uppercase"><strong>descuento_oferta</strong></small></label>
+                        <input type="number" name="descuento_oferta" class="form-control">
+                    </div>
+                    <!-- inicio_oferta -->
+                    <div class="col-12 col-md-3 mt-2 campoOferta">
+                        <label for="inicio_oferta"><small class="text-uppercase"><strong>inicio de la oferta</strong></small></label>
+                        <input type="date" name="inicio_oferta" class="form-control">
+                    </div>
+                    <!-- fin_oferta -->
+                    <div class="col-12 col-md-3 mt-2 campoOferta">
+                        <label for="fin_oferta"><small class="text-uppercase"><strong>fin de la oferta</strong></small></label>
+                        <input type="date" name="fin_oferta" class="form-control">
+                    </div>
                 </div>
                 <hr>
                 <div class="row">
@@ -157,5 +185,45 @@
     </div>
 </body>
 <!-- SCRIPTS -->
+<script>
+
+/*
+* ========================
+* FUNCIONES
+* ========================
+*/
+
+function mostrarCamposOferta() {
+    $('.campoOferta').each(function() {
+        $(this).show('slow');
+    });
+}
+
+function esconderCamposOferta() {
+    $('.campoOferta').each(function() {
+        $(this).hide('slow');
+    });
+}
+
+/*
+* ===================
+* EVENTOS
+* ===================
+*/
+
+$(document).on('change', '.inputOferta', function() {
+    tiene_oferta = $(this).val();
+
+    // SI TIENE OFERTA MOSTRAMOS LOS CAMPOS EXTRA DE OFERTA
+    if (tiene_oferta == 1) {
+        mostrarCamposOferta();
+        return;
+    }
+
+    // SI NO TIENE OFERTA ESCONDEMOS LOS CAMPOS EXTRA DE LA OFERTA
+    esconderCamposOferta();
+
+});
+</script>
 
 </html>

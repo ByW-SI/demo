@@ -65,7 +65,7 @@
             <!-- DATOS DEL RESPONSABLE -->
             <div class="col-12">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body rounded-0">
                         <div class="row">
                             <div class="col-12 col-md-3 mt-2">
                                 <label for="fechaInicio"><small class="text-uppercase"><strong>Fecha de inicio</strong></small></label>
@@ -217,7 +217,7 @@
 </body>
 <!-- SCRIPTS -->
 <script>
-function agregarProductoEnRentaATabla(producto) {
+function agregarProductoATablaEnRenta(producto) {
     // AGREGAMOS UNA NUEVA FILA A LA TABLA DE EQUIPOS EN RENTA
     $('#equiposEnRenta').append(`
             <tr productoId="${producto.id}">
@@ -236,7 +236,7 @@ function agregarProductoEnRentaATabla(producto) {
         `);
 }
 
-function agregarPaqueteEnRentaATabla(paquete) {
+function agregarPaqueteATablaEnRenta(paquete) {
     $('#equiposEnRenta').append(`
         <tr paqueteId="${paquete.id}">
             <td>
@@ -267,7 +267,7 @@ $('.botonRentarProducto').click(function() {
     };
 
     // AGREGAMOS EL PRODUCTO A LA TABLA EN RENTA
-    agregarProductoEnRentaATabla(producto);
+    agregarProductoATablaEnRenta(producto);
 
     // DESABILITAMOS EL BOTON DE ESE PRODUCTO
     $(this).prop('disabled', true);
@@ -286,7 +286,7 @@ $('.botonRentarPaquete').click(function() {
     };
 
     // AGREGAMOS EL PAQUETE A LA TABLA EN RENTA
-    agregarPaqueteEnRentaATabla(paquete);
+    agregarPaqueteATablaEnRenta(paquete);
 
     // DESABILITAMOS EL BOTON DE ESE PRODUCTO
     $(this).prop('disabled', true);
