@@ -67,19 +67,19 @@
                 <div class="card">
                     <div class="card-body rounded-0">
                         <div class="row">
-                            <div class="col-12 col-md-3 mt-2">
+                            <div class="col-12 col-md-4 mt-2">
                                 <label for="fechaInicio"><small class="text-uppercase"><strong>Fecha de inicio</strong></small></label>
                                 <input type="date" name="fecha_inicio" class="form-control">
                             </div>
-                            <div class="col-12 col-md-3 mt-2">
+                            <div class="col-12 col-md-4 mt-2">
                                 <label for="fechaFin"><small class="text-uppercase"><strong>Fecha de fin</strong></small></label>
-                                <input type="date" name="fecha_fin" class="form-control">
+                                <input type="date" name="fecha_fin" class="form-control" id="fecha_fin">
                             </div>
-                            <div class="col-12 col-md-3 mt-2">
+                            <div class="col-12 col-md-4 mt-2">
                                 <label for="responsable"><small class="text-uppercase"><strong>Responsable</strong></small></label>
                                 <input type="text" name="responsable" class="form-control">
                             </div>
-                            <div class="col-12 col-md-3 mt-2">
+                            <div class="col-12 col-md-4 mt-2">
                                 <label for="locacion"><small class="text-uppercase"><strong>Locación</strong></small></label>
                                 <input type="text" name="locacion" class="form-control">
                             </div>
@@ -254,6 +254,33 @@ function agregarPaqueteATablaEnRenta(paquete) {
     `);
 }
 
+function obtenerFechaActual(){
+    var hoy = new Date();
+
+    // OBTENEMOS EL DÍA DE HOY
+    anioActual = hoy.getFullYear();
+    mesActual = hoy.getMonth()+1;
+    diaActual = hoy.getDate();
+
+    // AJUSTAMOS LAS FECHAS
+    if(diaActual < 10){
+        diaActual = '0'+diaActual;
+    }
+
+    if(mesActual < 10){
+        mesActual = '0'+mesActual;
+    }
+
+    // RETORNAMOS EL FORTAMTO DE FECHA
+    return anioActual+"-"+mesActual+"-"+diaActual;
+
+}
+
+$(document).ready(function(){
+    fechaActual = obtenerFechaActual();
+    $('#fecha_fin').attr('min',fechaActual);
+});
+
 $('.botonRentarProducto').click(function() {
 
     // OBTENEMOS LOS ATRIBUTOS DEL PRODUCTO
@@ -303,6 +330,7 @@ $(document).on('click', '.botonNoRentarPaquete', function() {
     $(`tr[paqueteId=${paqueteId}]`).remove();
     $(`.botonRentarPaquete[paqueteId=${paqueteId}]`).prop('disabled', false);
 });
+
 </script>
 
 </html>
