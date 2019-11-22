@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- MENU DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-red" href="#"><strong>Demo</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- LINK PROYECTOS -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="proyectos.html">
+                            <i class="fa fa-file"></i>
+                            Proyectos
+                        </a>
+                    </li>
+                    <!-- LINK CLIENTES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                            Clientes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="clientes.html">
+                                <i class="fa fa-user-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                    <!-- LINK PRODUCTOS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cube"></i>
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="productos.html">
+                                <i class="fa fa-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- DATOS DEL RESPONSABLE -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-md-3 mt-2">
+                                <label for="fechaInicio"><small class="text-uppercase"><strong>Fecha de inicio</strong></small></label>
+                                <input type="date" name="fecha_inicio" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-3 mt-2">
+                                <label for="fechaFin"><small class="text-uppercase"><strong>Fecha de fin</strong></small></label>
+                                <input type="date" name="fecha_fin" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-3 mt-2">
+                                <label for="responsable"><small class="text-uppercase"><strong>Responsable</strong></small></label>
+                                <input type="text" name="responsable" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-3 mt-2">
+                                <label for="locacion"><small class="text-uppercase"><strong>Locación</strong></small></label>
+                                <input type="text" name="locacion" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <!-- CONTENEDOR DE PRODUCTOS -->
+            <div class="col-12 col-md-6">
+                <div class="card rounded-0">
+                    <div class="card-header bg-dark text-white rounded-0">
+                        <h5 class="text-center text-uppercase m-0">
+                            Productos
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- LISTA DE PRODUCTOS -->
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <span class="nombreProducto" productoId="1">Cámara</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-success rounded-0 botonRentarProducto" productoId="1">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>
+                                        <span class="nombreProducto" productoId="2">Tripie</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-success rounded-0 botonRentarProducto" productoId="2">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>
+                                        <span class="nombreProducto" productoId="3">Foco</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-success rounded-0 botonRentarProducto" productoId="3">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENEDOR DE PAQUETES -->
+            <div class="col-12 col-md-6">
+                <div class="card rounded-0">
+                    <div class="card-header bg-dark text-white rounded-0">
+                        <h5 class="text-center text-uppercase m-0">
+                            Paquetes
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- LISTA DE PAQUETES -->
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                        <span class="nombrePaquete" paqueteId="1">Iluminación</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-success rounded-0 botonRentarPaquete" paqueteId="1">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>
+                                        <span class="nombrePaquete" paqueteId="2">Audio</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-success rounded-0 botonRentarPaquete" paqueteId="2">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>
+                                        <span class="nombrePaquete" paqueteId="3">Sonido</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-success rounded-0 botonRentarPaquete" paqueteId="3">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <!-- CONTENEDOR DE EQUIPO EN RENTA -->
+            <div class="col-12">
+                <div class="card rounded-0">
+                    <div class="card-header bg-dark text-white rounded-0">
+                        <h5 class="text-center text-uppercase m-0">
+                            EQUIPO EN RENTA
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody id="equiposEnRenta">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-success rounded-0 shadow-sm" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+            <i class="fa fa-save"></i>
+            Rentar
+        </button>
+    </div>
+</body>
+<!-- SCRIPTS -->
+<script>
+function agregarProductoEnRentaATabla(producto) {
+    // AGREGAMOS UNA NUEVA FILA A LA TABLA DE EQUIPOS EN RENTA
+    $('#equiposEnRenta').append(`
+            <tr productoId="${producto.id}">
+                <td>
+                    <span class="badge badge-pill badge-warning">${producto.tipo}</span>
+                </td>
+                <td>
+                    ${producto.nombre}
+                </td>
+                <td class="text-right">
+                    <button class="btn btn-danger rounded-0 botonNoRentarProducto" productoId="${productoId}">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </td>
+            </tr>
+        `);
+}
+
+function agregarPaqueteEnRentaATabla(paquete) {
+    $('#equiposEnRenta').append(`
+        <tr paqueteId="${paquete.id}">
+            <td>
+                <span class="badge badge-pill badge-info">${paquete.tipo}</span>
+            </td>
+            <td>
+                ${paquete.nombre}
+            </td>
+            <td class="text-right">
+                <button class="btn btn-danger rounded-0 botonNoRentarPaquete" paqueteId="${paqueteId}">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </td>
+        </tr>
+    `);
+}
+
+$('.botonRentarProducto').click(function() {
+
+    // OBTENEMOS LOS ATRIBUTOS DEL PRODUCTO
+    productoId = $(this).attr('productoId');
+    nombreProducto = $(`.nombreProducto[productoId=${productoId}]`).html()
+
+    producto = {
+        "id": productoId,
+        "nombre": nombreProducto,
+        "tipo": "Producto",
+    };
+
+    // AGREGAMOS EL PRODUCTO A LA TABLA EN RENTA
+    agregarProductoEnRentaATabla(producto);
+
+    // DESABILITAMOS EL BOTON DE ESE PRODUCTO
+    $(this).prop('disabled', true);
+
+});
+
+$('.botonRentarPaquete').click(function() {
+
+    // OBTENEMOS LOS ATRIBUTOS DEL PAQUETE
+    paqueteId = $(this).attr('paqueteId');
+    nombrePaquete = $(`.nombrePaquete[paqueteId=${paqueteId}]`).html()
+    paquete = {
+        'id': paqueteId,
+        'nombre': nombrePaquete,
+        'tipo': "Paquete",
+    };
+
+    // AGREGAMOS EL PAQUETE A LA TABLA EN RENTA
+    agregarPaqueteEnRentaATabla(paquete);
+
+    // DESABILITAMOS EL BOTON DE ESE PRODUCTO
+    $(this).prop('disabled', true);
+});
+
+$(document).on('click', '.botonNoRentarProducto', function() {
+    productoId = $(this).attr('productoId');
+    $(`tr[productoId=${productoId}]`).remove();
+    $(`.botonRentarProducto[productoId=${productoId}]`).prop('disabled', false);
+});
+
+$(document).on('click', '.botonNoRentarPaquete', function() {
+    paqueteId = $(this).attr('paqueteId');
+    $(`tr[paqueteId=${paqueteId}]`).remove();
+    $(`.botonRentarPaquete[paqueteId=${paqueteId}]`).prop('disabled', false);
+});
+</script>
+
+</html>

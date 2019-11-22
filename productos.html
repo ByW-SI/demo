@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- MENU DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-red" href="#"><strong>Demo</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- LINK PROYECTOS -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="proyectos.html">
+                            <i class="fa fa-file"></i>
+                            Proyectos
+                        </a>
+                    </li>
+                    <!-- LINK CLIENTES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                            Clientes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="clientes.html">
+                                <i class="fa fa-user-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                    <!-- LINK PRODUCTOS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cube"></i>
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="productos.html">
+                                <i class="fa fa-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FORMULARIO DE ALTA DE PRODUCTO -->
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header bg-dark rounded-0">
+                <h5 class="text-center text-uppercase text-white">
+                    Alta de producto
+                </h5>
+            </div>
+            <div class="card-body rounded-0">
+                <div class="row">
+                    <!-- titulo -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="titulo"><small class="text-uppercase"><strong>titulo</strong></small></label>
+                        <input type="text" name="titulo" class="form-control">
+                    </div>
+                    <!-- titular -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="titular"><small class="text-uppercase"><strong>titular</strong></small></label>
+                        <input type="text" name="titular" class="form-control">
+                    </div>
+                    <!-- tipo -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="tipo"><small class="text-uppercase"><strong>tipo</strong></small></label>
+                        <input type="text" name="tipo" class="form-control">
+                    </div>
+                    <!-- marca -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="marca"><small class="text-uppercase"><strong>marca</strong></small></label>
+                        <input type="text" name="marca" class="form-control">
+                    </div>
+                    <!-- tipo_sistema -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="tipo_sistema"><small class="text-uppercase"><strong>tipo de sistema</strong></small></label>
+                        <input type="text" name="tipo_sistema" class="form-control">
+                    </div>
+                    <!-- stock -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="stock"><small class="text-uppercase"><strong>stock</strong></small></label>
+                        <input type="number" name="stock" class="form-control">
+                    </div>
+                    <!-- dias_entrega -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="dias_entrega"><small class="text-uppercase"><strong>días de entrega</strong></small></label>
+                        <input type="number" name="dias_entrega" class="form-control">
+                    </div>
+                    <!-- peso -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="peso"><small class="text-uppercase"><strong>peso</strong></small></label>
+                        <input type="number" name="peso" class="form-control">
+                    </div>
+                    <!-- largo -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="largo"><small class="text-uppercase"><strong>largo</strong></small></label>
+                        <input type="number" name="largo" class="form-control">
+                    </div>
+                    <!-- alto -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="alto"><small class="text-uppercase"><strong>alto</strong></small></label>
+                        <input type="number" name="alto" class="form-control">
+                    </div>
+                    <!-- ancho -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="ancho"><small class="text-uppercase"><strong>ancho</strong></small></label>
+                        <input type="number" name="ancho" class="form-control">
+                    </div>
+                    <!-- sku -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="sku"><small class="text-uppercase"><strong>sku</strong></small></label>
+                        <input type="text" name="sku" class="form-control">
+                    </div>
+                    <!-- precio -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="precio"><small class="text-uppercase"><strong>precio</strong></small></label>
+                        <input type="number" name="precio" class="form-control">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for="descripcion"><small class="text-uppercase"><strong>descripción</strong></small></label>
+                        <textarea name="descripcion" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success rounded-0">
+                    <i class="fa fa-save"></i>
+                    Gardar
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- SCRIPTS -->
+
+</html>

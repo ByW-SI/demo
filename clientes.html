@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- MENU DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-red" href="#"><strong>Demo</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- LINK PROYECTOS -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="proyectos.html">
+                            <i class="fa fa-file"></i>
+                            Proyectos
+                        </a>
+                    </li>
+                    <!-- LINK CLIENTES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                            Clientes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="clientes.html">
+                                <i class="fa fa-user-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                    <!-- LINK PRODUCTOS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cube"></i>
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="productos.html">
+                                <i class="fa fa-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <!-- FORMULARIO DE LOS DATOS DEL CLIENTE -->
+        <div class="card">
+            <div class="card-header bg-dark rounded-0">
+                <h5 class="text-center text-uppercase text-white">
+                    Datos del cliente
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <!-- tipo_persona -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>Tipo de persona</strong></small></label>
+                        <select name="tipo_persona" class="form-control">
+                            <option value="">Física</option>
+                            <option value="">Moral</option>
+                        </select>
+                    </div>
+                    <!-- nombre -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>nombre</strong></small></label>
+                        <input type="text" name="nombre" class="form-control">
+                    </div>
+                    <!-- apellidos -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>apellidos</strong></small></label>
+                        <input type="text" name="apellidos" class="form-control">
+                    </div>
+                    <!-- contacto_principal -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>Contacto principal</strong></small></label>
+                        <input type="text" name="contacto_principal" class="form-control">
+                    </div>
+                    <!-- correo -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>Correo</strong></small></label>
+                        <input type="text" name="correo" class="form-control">
+                    </div>
+                    <!-- rfc -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>rfc</strong></small></label>
+                        <input type="text" name="rfc" class="form-control">
+                    </div>
+                    <!-- telefono_casa -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>teléfono de casa</strong></small></label>
+                        <input type="text" name="telefono_casa" class="form-control">
+                    </div>
+                    <!-- telefono_oficina -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>teléfono de oficina</strong></small></label>
+                        <input type="text" name="telefono_oficina" class="form-control">
+                    </div>
+                    <!-- telefono_celular -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>teléfono celular</strong></small></label>
+                        <input type="text" name="telefono_celular" class="form-control">
+                    </div>
+                    <!-- forma_contacto -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>Forma de contacto</strong></small></label>
+                        <select name="forma_contacto" id="" class="form-control">
+                            <option value="telefono">teléfono</option>
+                            <option value="correo">correo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FORMULARIO DE LA DIRECCIÓN FÍSICA -->
+        <div class="card mt-4">
+            <div class="card-header bg-dark rounded-0">
+                <h5 class="text-center text-uppercase text-white">
+                    Dirección física
+                </h5>
+            </div>
+            <div class="card-body rounded-0">
+                <div class="row">
+                    <!-- calle -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>Calle</strong></small></label>
+                        <input type="text" name="calle" class="form-control">
+                    </div>
+                    <!-- numero_exterior -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>número exterior</strong></small></label>
+                        <input type="text" name="numero_exterior" class="form-control">
+                    </div>
+                    <!-- numero_interior -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>número interior</strong></small></label>
+                        <input type="text" name="numero_interior" class="form-control">
+                    </div>
+                    <!-- codigo_postal -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>código postal</strong></small></label>
+                        <input type="text" name="codigo_postal" class="form-control">
+                    </div>
+                    <!-- colonia -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>colonia</strong></small></label>
+                        <input type="text" name="colonia" class="form-control">
+                    </div>
+                    <!-- municipio -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>municipio</strong></small></label>
+                        <input type="text" name="municipio" class="form-control">
+                    </div>
+                    <!-- ciudad -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>ciudad</strong></small></label>
+                        <input type="text" name="ciudad" class="form-control">
+                    </div>
+                    <!-- estado -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>estado</strong></small></label>
+                        <input type="text" name="estado" class="form-control">
+                    </div>
+                    <!-- entre_calles -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>entre calles</strong></small></label>
+                        <input type="text" name="entre_calles" class="form-control">
+                    </div>
+                    <!-- referencia -->
+                    <div class="col-12 col-md-3 mt-2">
+                        <label for=""><small class="text-uppercase"><strong>referencia</strong></small></label>
+                        <input type="text" name="referencia" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-success rounded-0 mb-4">
+            <i class="fa fa-save"></i>
+            Guardar
+        </button>
+    </div>
+</body>
+<!-- SCRIPTS -->
+
+</html>
