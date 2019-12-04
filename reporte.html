@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+    <!-- MENU DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-red" href="#"><strong>Demo</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- LINK PROYECTOS -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="proyectos.html">
+                            <i class="fa fa-file"></i>
+                            Proyectos
+                        </a>
+                    </li>
+                    <!-- LINK CLIENTES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                            Clientes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="clientes.html">
+                                <i class="fa fa-user-plus"></i>
+                                alta
+                            </a>
+                        </div>
+                    </li>
+                    <!-- LINK PRODUCTOS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cube"></i>
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="productos.html">
+                                <i class="fa fa-plus"></i>
+                                alta
+                            </a>
+                            <a class="dropdown-item" href="stock.html">
+                                <i class="fa fa-truck-loading"></i>
+                                stock
+                            </a>
+                        </div>
+                    </li>
+                    <!-- LINK REPORTE -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="reporte.html">
+                            <i class="fas fa-chart-pie"></i>
+                            Reporte
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <!-- HMIs -->
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center">Productos</h3>
+                <table class="table" id="tablaProductos">
+                    <thead>
+                        <tr class="table-info border-0">
+                            <th scope="col">Qty</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Brand</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>M-Series M18 Open Face with Facetted Reflector, 1,800W</td>
+                            <td>ARRI</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>M-Series M8 Open Face with Facetted Reflector, 800W</td>
+                            <td>ARRI</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Skypanel S60-C</td>
+                            <td>ARRI</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Skypanel S120-C</td>
+                            <td>ARRI</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Hollywood Combo - Triple Riser</td>
+                            <td>Matthews Grip</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Hollywood Low Boy Combo - Double Riser</td>
+                            <td>Matthews Grip</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Junior Pipe Clamp</td>
+                            <td>Matthews Grip</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Baby Pipe Clamp</td>
+                            <td>Matthews Grip</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Round-d-Round Dolly 395300</td>
+                            <td>Matthews Grip</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Marco de 20X20</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">25</th>
+                            <td>Sandbags de 7 kgs</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>CAJA DE CUÑAS para calzar tracks</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>SL1 Mix</td>
+                            <td>DMG Lumiere</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Controlador de luces</td>
+                            <td>Exalux</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mini Preemie Baby - Steel</td>
+                            <td>Matthews Grip</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!-- SCRIPTS -->
+<script>
+
+$(document).ready(function(){
+    $('#tablaProductos').DataTable();
+});
+
+</script>
+
+</html>
